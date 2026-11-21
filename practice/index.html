@@ -909,11 +909,11 @@ var CSS='.kgx-sec{background:var(--bg,#ffffff);color:var(--text,#16212b);padding
 .kgx .it .h{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}\
 .kgx .it .nm{font-weight:700}.kgx .it .en{color:var(--muted,#5b6874);font-size:13px}\
 .kgx .ty{font-size:11.5px;border-radius:5px;padding:0 6px;color:#13141f;font-weight:700;white-space:nowrap}\
-.kgx .it .df{color:#d7d4e6;font-size:14px;margin:3px 0 0}\
+.kgx .it .df{color:var(--muted,#5b6874);font-size:14px;margin:3px 0 0}\
 .kgx .it .more{display:none;margin-top:6px;font-size:13.5px;color:var(--muted,#5b6874)}.kgx .it.sel .more{display:block}\
 .kgx .it a{color:var(--gfp,#13733a)}\
 .kgx .rel{display:inline-block;margin:2px 6px 2px 0;padding:1px 8px;border-radius:6px;background:var(--bg,#ffffff);border:1px solid var(--rule,#d5dbe2);font-size:12.5px;cursor:pointer;color:var(--text,#16212b)}\
-.kgx .gbox{position:relative;border:1px solid var(--rule,#d5dbe2);border-radius:10px;background:#101119;overflow:hidden}\
+.kgx .gbox{position:relative;border:1px solid var(--rule,#d5dbe2);border-radius:10px;background:#f7f9fc;overflow:hidden}\
 .kgx .gbox canvas{display:block;width:100%;height:420px}\
 .kgx .legend{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--muted,#5b6874);margin-top:8px}\
 .kgx .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:-1px}\
@@ -1025,16 +1025,16 @@ function mountIndex(root){
     G.pts.forEach(function(p){p.X=pad+(p.x-mx)*sx; p.Y=pad+(p.y-my)*sy; if(G.pts.length===1){p.X=W/2;p.Y=H/2;}});
     c.lineWidth=1;
     G.es.forEach(function(e){var a=G.pts[G.ix[e.s]],b=G.pts[G.ix[e.o]]; var hot=sel&&(e.s===sel||e.o===sel);
-      c.strokeStyle=hot?'rgba(236,234,243,.55)':'rgba(157,155,184,.22)'; c.beginPath(); c.moveTo(a.X,a.Y); c.lineTo(b.X,b.Y); c.stroke();
+      c.strokeStyle=hot?'rgba(22,33,43,.5)':'rgba(91,104,116,.22)'; c.beginPath(); c.moveTo(a.X,a.Y); c.lineTo(b.X,b.Y); c.stroke();
       var ang=Math.atan2(b.Y-a.Y,b.X-a.X), ex=b.X-Math.cos(ang)*9, ey=b.Y-Math.sin(ang)*9;
       c.fillStyle=c.strokeStyle; c.beginPath(); c.moveTo(ex,ey); c.lineTo(ex-Math.cos(ang-.4)*7,ey-Math.sin(ang-.4)*7); c.lineTo(ex-Math.cos(ang+.4)*7,ey-Math.sin(ang+.4)*7); c.fill();
-      if(sel&&hot&&G.pts.length<26){c.fillStyle='#9d9bb8'; c.font='11px '+getComputedStyle(document.body).fontFamily; c.textAlign='center';
+      if(sel&&hot&&G.pts.length<26){c.fillStyle='#5b6874'; c.font='11px '+getComputedStyle(document.body).fontFamily; c.textAlign='center';
         c.fillText(REL[pn(e.p)]||pn(e.p),(a.X+b.X)/2,(a.Y+b.Y)/2-4);} });
     c.textAlign='center'; c.font='12.5px '+getComputedStyle(document.body).fontFamily;
     G.pts.forEach(function(p){var n=N[p.id]; var R=p.id===sel?9:6; c.fillStyle=tc(n.type); c.beginPath(); c.arc(p.X,p.Y,R,0,7); c.fill();
-      if(p.id===sel){c.strokeStyle='#eceaf3';c.lineWidth=2;c.stroke();c.lineWidth=1;}
-      var t=lab(n); if(t.length>14)t=t.slice(0,13)+'…'; c.fillStyle=p.id===sel?'#fff':'#d7d4e6'; c.fillText(t,p.X,p.Y-R-5);});
-    c.fillStyle='rgba(241,182,70,.9)'; c.font='11px '+getComputedStyle(document.body).fontFamily; c.textAlign='left';
+      if(p.id===sel){c.strokeStyle='#16212b';c.lineWidth=2;c.stroke();c.lineWidth=1;}
+      var t=lab(n); if(t.length>14)t=t.slice(0,13)+'…'; c.fillStyle=p.id===sel?'#16212b':'#3b4652'; c.fillText(t,p.X,p.Y-R-5);});
+    c.fillStyle='rgba(163,92,0,.9)'; c.font='11px '+getComputedStyle(document.body).fontFamily; c.textAlign='left';
     c.fillText(sel?'이웃 '+(G.pts.length-1)+'개':'개요 — 연결 많은 항목 '+G.pts.length+'개',10,18);
   }
   cv.addEventListener('click',function(ev){var r=cv.getBoundingClientRect(),x=ev.clientX-r.left,y=ev.clientY-r.top,best=null,bd=400;

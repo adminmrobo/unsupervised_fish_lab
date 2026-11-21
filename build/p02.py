@@ -113,7 +113,7 @@ def body():
                ('fly', 'point', '두 주머니 사이에 낀 점을 눌러 봐. a와 b가 얼마나 비슷한지.'),
                ('asst', 'report', '경계 점은 a와 b가 비슷해서 0 근처가 나와요. 가운데 점은 0.8을 넘고요.')])
     s += panel('p23', '실험 · 점 하나의 실루엣 재기', '실제 데이터 · 계산은 이 페이지가 직접',
-               '<p class="small muted">그림 속 점을 누르거나 탭하면 그 물고기의 a, b, s를 계산합니다. 주머니는 2-1과 같은 k-평균(k=3) 결과입니다.</p>'
+               '<p class="small muted">그림 속 점을 누르거나 탭하면 그 물고기의 a, b, s를 계산합니다. 선은 모든 물고기 중 일부만 그렸고, a·b는 그 주머니 <b>모든</b> 물고기까지 거리의 평균입니다(중심까지의 거리가 아님). 주머니는 2-1과 같은 k-평균(k=3) 결과입니다.</p>'
                + canvas('cv23', 340, '주머니 셋으로 나눈 물고기, 고른 점과 a·b를 잰 선') +
                '<section class="kpis" id="kp23" aria-label="숫자 요약"></section><div class="insight" id="in23" aria-live="polite"></div>', real=True)
     s += explain(['a는 내 주머니 안 다른 물고기들까지의 평균 거리, b는 가장 가까운 옆 주머니 물고기들까지의 평균 거리입니다.',
@@ -293,7 +293,12 @@ var BASE3=FL.kmeans(ZR,3,5,7);
   var hrMean=[0,0,0],cnt=[0,0,0];for(var i=0;i<N;i++){hrMean[lab[i]]+=RAT[i][0];cnt[lab[i]]++;}
   function draw(){var f=fit(cv),g=f.c;A=ratioAxes(g,f.W,f.H);for(var i=0;i<N;i++)FL.dot(g,A.sx(RAT[i][0]),A.sy(RAT[i][1]),2.6,CLC[lab[i]],.55);
     if(sel>=0){var r=FL.silOne(ZR,lab,3,sel),x=A.sx(RAT[sel][0]),y=A.sy(RAT[sel][1]);
-      [lab[sel],r.near].forEach(function(c,ci){var m=[0,0],n=0;for(var j=0;j<N;j++)if(lab[j]===c){m[0]+=RAT[j][0];m[1]+=RAT[j][1];n++;}m[0]/=n;m[1]/=n;g.setLineDash(ci?[6,4]:[]);g.strokeStyle=ci?'#c9302c':'#16212b';g.lineWidth=2;g.beginPath();g.moveTo(x,y);g.lineTo(A.sx(m[0]),A.sy(m[1]));g.stroke();g.setLineDash([]);g.fillStyle=g.strokeStyle;g.font='700 13px "IBM Plex Sans KR",sans-serif';g.fillText(ci?'b':'a',(x+A.sx(m[0]))/2+6,(y+A.sy(m[1]))/2-6);});
+      /* a·b는 '중심까지'가 아니라 '모든 물고기까지 거리의 평균' — 표본 몇 마리까지 가는 선으로 보여 준다 */
+      [lab[sel],r.near].forEach(function(c,ci){var mem=[];for(var j=0;j<N;j++)if(lab[j]===c&&j!==sel)mem.push(j);var step=Math.max(1,Math.floor(mem.length/14));
+        g.setLineDash(ci?[5,4]:[]);g.strokeStyle=ci?'rgba(201,48,44,.55)':'rgba(22,33,43,.45)';g.lineWidth=1.2;
+        for(var q=0;q<mem.length;q+=step){var j2=mem[q];g.beginPath();g.moveTo(x,y);g.lineTo(A.sx(RAT[j2][0]),A.sy(RAT[j2][1]));g.stroke();}
+        g.setLineDash([]);});
+      g.font='700 13px "IBM Plex Sans KR",sans-serif';g.fillStyle='#16212b';g.fillText('실선: 내 주머니 물고기들 → 길이 평균 = a',A.L+8,A.T+16);g.fillStyle='#c9302c';g.fillText('점선: 가장 가까운 옆 주머니 물고기들 → 길이 평균 = b',A.L+8,A.T+34);
       g.strokeStyle='#16212b';g.lineWidth=3;g.beginPath();g.arc(x,y,8,0,6.2832);g.stroke();}
     stamp(g,f.W,'실제 데이터 · 점을 눌러 보세요');}
   function info(){if(meanS===null)meanS=FL.silhouette(ZR,lab,3);
@@ -301,7 +306,8 @@ var BASE3=FL.kmeans(ZR,3,5,7);
     var r=FL.silOne(ZR,lab,3,sel);FL.kpis($('#kp23'),[[r.a.toFixed(3),'a (내 주머니까지 평균 거리)','g'],[r.b.toFixed(3),'b (가장 가까운 옆 주머니까지)','r'],[r.s.toFixed(3),'이 점의 실루엣 s','m'],[meanS.toFixed(3),'전체 평균 실루엣','a']]);
     $('#in23').innerHTML='<p class="'+(r.s>.5?'g':r.s>0?'a':'r')+'">s = ('+r.b.toFixed(3)+' − '+r.a.toFixed(3)+') ÷ '+Math.max(r.a,r.b).toFixed(3)+' = <b>'+r.s.toFixed(3)+'</b>. '+(r.s>.5?'자기 주머니 한가운데에 있는 물고기입니다.':r.s>0?'두 주머니 경계 가까이에 있습니다. 어느 쪽에 넣을지 애매한 물고기입니다.':'옆 주머니가 더 가깝습니다. 잘못 들어간 물고기입니다.')+' (이 물고기의 이름표: '+SPKO[D.sp[sel]]+')</p>';}
   cv.addEventListener('pointerdown',function(e){if(!A)return;var r=cv.getBoundingClientRect(),px=e.clientX-r.left,py=e.clientY-r.top,b=-1,bd=1e9;for(var i=0;i<N;i++){var dx=A.sx(RAT[i][0])-px,dy=A.sy(RAT[i][1])-py,d=dx*dx+dy*dy;if(d<bd){bd=d;b=i;}}if(bd<400){sel=b;draw();info();}});
-  setTimeout(info,50);Loop.add(cv,function(dt){if(dt===0)draw();});
+  /* 처음에는 경계에 선 물고기 하나를 골라 둔다 (실루엣 0.15에 가장 가까운 물고기) */
+  setTimeout(function(){var best=-1,bd=9;for(var i=0;i<N;i+=3){var r=FL.silOne(ZR,lab,3,i);if(Math.abs(r.s-.15)<bd){bd=Math.abs(r.s-.15);best=i;}}sel=best;draw();info();},50);Loop.add(cv,function(dt){if(dt===0)draw();});
 })();
 /* 2-4 계층 군집 (워드, 원본 158마리) */
 (function(){var cv=$('#cv24'),idx=[];for(var i=0;i<N;i++)if(D.orig[i])idx.push(i);var n=idx.length;

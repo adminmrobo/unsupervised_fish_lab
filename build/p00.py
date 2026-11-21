@@ -6,6 +6,13 @@ P = 'index.html'
 COLAB = 'https://colab.research.google.com/drive/19BdWcG0mjgrbJ3pwlqzBwbQ7Qt2hh3DN?usp=sharing'
 
 
+WORK = {'01_no_answer_key.html': '단위가 섞인 데이터(센서, 고객 기록)를 비교하기 전에 눈금부터 맞춥니다.',
+        '02_grouping.html': '고객·설비를 패턴별로 묶고, 묶음마다 대표 기록을 읽어 사람이 이름을 붙입니다.',
+        '03_folding.html': '변수 수십 개를 지도 한 장으로 요약해 대시보드에 띄웁니다.',
+        '04_guessing.html': '빠진 값을 채우고, 처음 보는 데이터에는 "모른다" 경보를 붙입니다.',
+        'practice/index.html': '조건을 바꿔도 결론이 유지되는지 직접 확인합니다.'}
+
+
 def body():
     s_ = R['supervised']; kr = R['kmr']; pc = R['pca']; mw = R['mask_weight']; av = R['ae_vs_pca']; km = R['knn_map']
     b = three([
@@ -42,7 +49,7 @@ def body():
            ('practice/index.html', '마지막 장', '실전 연습장 — 어시장 운영 시뮬레이터', ['진열대 정리 (군집)', '물고기 지도 만들기 (PCA)', '검수대 (가린 무게·범위 밖)'])]
     b += section('toc', '목차',
                  '<div class="mapbar"><span>정답표 없이</span><i>→</i><span>묶기</span><i>→</i><span>접기</span><i>→</i><span>맞히기</span><i>→</i><span class="on">실전 연습장</span></div>'
-                 '<div class="toc">' + ''.join('<a href="%s"><span class="k">%s</span><b>%s</b><ul>%s</ul></a>' % (h, k, t, ''.join('<li>%s</li>' % x for x in li)) for h, k, t, li in toc) + '</div>'
+                 '<div class="toc">' + ''.join('<a href="%s"><span class="k">%s</span><b>%s</b><ul>%s</ul><span class="small"><b>업무에서는</b> %s</span></a>' % (h, k, t, ''.join('<li>%s</li>' % x for x in li), WORK[h]) for h, k, t, li in toc) + '</div>'
                  + say('sia', 'guide', '1장부터 차례로 읽기를 권해요. 앞 단계의 결과가 다음 단계의 재료가 됩니다. 이미 아는 장은 건너뛰어도 괜찮습니다.'))
 
     b += section('record', '대결 전적 — 초파리 연구원 vs 주판봇',
