@@ -1,0 +1,148 @@
+[
+ {
+  "id": "pyae2019fish",
+  "type": "dataset",
+  "title": "Fish market [Dataset]",
+  "author": [
+   {
+    "family": "Pyae",
+    "given": "Aung"
+   }
+  ],
+  "publisher": "Kaggle",
+  "URL": "https://www.kaggle.com/datasets/aungpyaeap/fish-market",
+  "genre": "데이터셋 (물고기 7종 159마리)",
+  "lab": {
+   "work": "lab:work/pyae2019fish",
+   "role": "data",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": false,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "Hugging Face scikit-learn/Fish 데이터 카드의 출처 표기 (2026-11-21 확인)",
+   "checkedSource": "web"
+  }
+ },
+ {
+  "id": "ahn2026supervised",
+  "type": "webpage",
+  "title": "Fish Market Data로 쉽게 따라하는 머신러닝",
+  "author": [
+   {
+    "family": "안",
+    "given": "상선"
+   }
+  ],
+  "publisher": "(주)M-Robo",
+  "URL": "https://github.com/adminmrobo/Fish_Market_Data_Machine_Learning",
+  "genre": "지도학습 해설 시리즈 (증강 데이터 fish_market_x10.csv 출처)",
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/ahn2026supervised",
+   "role": "background",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "저장소 README (2026-11-21 확인)",
+   "checkedSource": "repo"
+  }
+ },
+ {
+  "id": "ahn2026slides",
+  "type": "speech",
+  "title": "라벨링 없이 맞추는 AI — 비지도학습 모델 (강의 슬라이드)",
+  "author": [
+   {
+    "family": "안",
+    "given": "상선"
+   }
+  ],
+  "publisher": "(주)M-Robo",
+  "genre": "강의 자료 (슬라이드 35쪽, Colab 실습 노트북)",
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/ahn2026slides",
+   "role": "primary",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": false,
+    "pages": true,
+    "doi": false
+   },
+   "checkedBy": "저자가 준 PDF",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "hastie2009elements",
+  "type": "book",
+  "title": "The Elements of Statistical Learning (2nd ed.)",
+  "author": [
+   {
+    "family": "Hastie",
+    "given": "Trevor"
+   },
+   {
+    "family": "Tibshirani",
+    "given": "Robert"
+   },
+   {
+    "family": "Friedman",
+    "given": "Jerome"
+   }
+  ],
+  "publisher": "Springer",
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/hastie2009elements",
+   "role": "background",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김",
+   "checkedSource": "page"
+  }
+ }
+]

@@ -1,0 +1,41 @@
+{
+ "title": "비지도학습 물고기 연구실 — 목차",
+ "number": "0",
+ "series": "비지도학습 물고기 연구실 (unsupervised_fish_lab)",
+ "about": [
+  "lab:concept/unsupervised-learning"
+ ],
+ "basedOn": [
+  "pyae2019fish",
+  "ahn2026supervised",
+  "ahn2026slides",
+  "hastie2009elements"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-21",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/unsupervised_fish_lab/index.html",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "domain": [
+  "ai"
+ ],
+ "suggestedCitation": "안상선 (2026). 비지도학습 물고기 연구실 — 목차. 비지도학습 물고기 연구실 (unsupervised_fish_lab) 0, v1.0."
+}

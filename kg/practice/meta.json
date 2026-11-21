@@ -1,0 +1,40 @@
+{
+ "title": "마지막 장 · 실전 연습장 — 어시장 운영 시뮬레이터",
+ "number": "5",
+ "series": "비지도학습 물고기 연구실 (unsupervised_fish_lab)",
+ "about": [
+  "lab:sim/practice-shelf",
+  "lab:sim/practice-check"
+ ],
+ "basedOn": [
+  "pyae2019fish",
+  "ahn2026slides"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-21",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/unsupervised_fish_lab/practice/",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "domain": [
+  "ai"
+ ],
+ "suggestedCitation": "안상선 (2026). 마지막 장 · 실전 연습장 — 어시장 운영 시뮬레이터. 비지도학습 물고기 연구실 (unsupervised_fish_lab) 5, v1.0."
+}

@@ -1,0 +1,148 @@
+[
+ {
+  "id": "pyae2019fish",
+  "type": "dataset",
+  "title": "Fish market [Dataset]",
+  "author": [
+   {
+    "family": "Pyae",
+    "given": "Aung"
+   }
+  ],
+  "publisher": "Kaggle",
+  "URL": "https://www.kaggle.com/datasets/aungpyaeap/fish-market",
+  "genre": "데이터셋 (물고기 7종 159마리)",
+  "lab": {
+   "work": "lab:work/pyae2019fish",
+   "role": "data",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": false,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "Hugging Face scikit-learn/Fish 데이터 카드의 출처 표기 (2026-11-21 확인)",
+   "checkedSource": "web"
+  }
+ },
+ {
+  "id": "ahn2026slides",
+  "type": "speech",
+  "title": "라벨링 없이 맞추는 AI — 비지도학습 모델 (강의 슬라이드)",
+  "author": [
+   {
+    "family": "안",
+    "given": "상선"
+   }
+  ],
+  "publisher": "(주)M-Robo",
+  "genre": "강의 자료 (슬라이드 35쪽, Colab 실습 노트북)",
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/ahn2026slides",
+   "role": "primary",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": false,
+    "pages": true,
+    "doi": false
+   },
+   "checkedBy": "저자가 준 PDF",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "pearson1901lines",
+  "type": "article-journal",
+  "title": "On lines and planes of closest fit to systems of points in space",
+  "author": [
+   {
+    "family": "Pearson",
+    "given": "Karl"
+   }
+  ],
+  "container-title": "Philosophical Magazine",
+  "volume": "2",
+  "issue": "11",
+  "page": "559–572",
+  "issued": {
+   "date-parts": [
+    [
+     1901
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/pearson1901lines",
+   "role": "method",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "turk1991eigenfaces",
+  "type": "article-journal",
+  "title": "Eigenfaces for recognition",
+  "author": [
+   {
+    "family": "Turk",
+    "given": "Matthew"
+   },
+   {
+    "family": "Pentland",
+    "given": "Alex"
+   }
+  ],
+  "container-title": "Journal of Cognitive Neuroscience",
+  "volume": "3",
+  "issue": "1",
+  "page": "71–86",
+  "issued": {
+   "date-parts": [
+    [
+     1991
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/turk1991eigenfaces",
+   "role": "background",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ }
+]

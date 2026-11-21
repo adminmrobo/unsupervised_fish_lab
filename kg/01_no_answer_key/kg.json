@@ -1,0 +1,613 @@
+{
+ "version": "1.0",
+ "page": "01_no_answer_key",
+ "nodes": [
+  {
+   "id": "lab:concept/unsupervised-learning",
+   "type": "Concept",
+   "label": {
+    "ko": "비지도학습",
+    "en": "Unsupervised learning"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "정답 없이 입력만으로 데이터의 구조를 찾는 학습"
+   }
+  },
+  {
+   "id": "lab:concept/supervised-learning",
+   "type": "Concept",
+   "label": {
+    "ko": "지도학습",
+    "en": "Supervised learning"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "입력과 정답(이름표)을 함께 주고 정답을 맞히도록 배우는 학습"
+   }
+  },
+  {
+   "id": "lab:concept/self-supervised-learning",
+   "type": "Concept",
+   "label": {
+    "ko": "자기지도학습",
+    "en": "Self-supervised learning"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "일부를 가리고 맞히게 해 가린 값을 정답으로 쓰는 학습"
+   }
+  },
+  {
+   "id": "lab:concept/feature",
+   "type": "Concept",
+   "label": {
+    "ko": "특성(측정값)",
+    "en": "Feature"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#map",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "한 마리를 설명하는 숫자 열, 여기서는 여섯 개"
+   }
+  },
+  {
+   "id": "lab:concept/euclidean-distance",
+   "type": "Concept",
+   "label": {
+    "ko": "유클리드 거리",
+    "en": "Euclidean distance"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "차이의 제곱합에 루트를 씌운 직선 거리"
+   }
+  },
+  {
+   "id": "lab:concept/manhattan-distance",
+   "type": "Concept",
+   "label": {
+    "ko": "맨해튼 거리",
+    "en": "Manhattan distance"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "차이의 절댓값을 더한 거리"
+   }
+  },
+  {
+   "id": "lab:concept/body-ratio",
+   "type": "Concept",
+   "label": {
+    "ko": "체형 비율 (높이÷길이1)",
+    "en": "Body-shape ratio"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "크기를 빼고 생김새만 남긴 비율"
+   }
+  },
+  {
+   "id": "lab:method/standardization",
+   "type": "Method",
+   "label": {
+    "ko": "표준화 (z 점수)",
+    "en": "Standardization"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "평균을 빼고 표준편차로 나눠 눈금을 맞추는 일"
+   }
+  },
+  {
+   "id": "lab:limitation/unit-dominance",
+   "type": "Limitation",
+   "label": {
+    "ko": "단위가 큰 변수가 거리를 독점",
+    "en": "Unit dominance in distance"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "원 단위면 무게가 이웃 거리의 81%를 차지"
+   }
+  },
+  {
+   "id": "lab:claim/std-improves-neighbors",
+   "type": "Claim",
+   "label": {
+    "ko": "표준화하면 이웃이 같은 종인 비율이 78.9%→92.3%",
+    "en": "Standardization raises same-species neighbor rate"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#duel",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "pyae2019fish",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:limitation/redundant-features",
+   "type": "Limitation",
+   "label": {
+    "ko": "같은 정보를 가진 변수의 중복 투표",
+    "en": "Redundant features"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "길이 세 값의 상관이 0.99 이상"
+   }
+  },
+  {
+   "id": "lab:sim/u1-standardize",
+   "type": "Simulation",
+   "label": {
+    "ko": "원 단위 vs 표준화 실험장",
+    "en": "Raw vs standardized lab"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/pyae2019fish",
+   "type": "Work",
+   "label": {
+    "ko": "Pyae (n.d.) Kaggle",
+    "en": "Fish market [Dataset]"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/ahn2026supervised",
+   "type": "Work",
+   "label": {
+    "ko": "안 (2026) (주)M-Robo",
+    "en": "Fish Market Data로 쉽게 따라하는 머신러닝"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/ahn2026slides",
+   "type": "Work",
+   "label": {
+    "ko": "안 (2026) (주)M-Robo",
+    "en": "라벨링 없이 맞추는 AI — 비지도학습 모델 (강의 슬라이드)"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/hastie2009elements",
+   "type": "Work",
+   "label": {
+    "ko": "Hastie 외 (2009) Springer",
+    "en": "The Elements of Statistical Learning (2nd ed.)"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-1-q11-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "비지도학습이 학습할 때 받는 것은?",
+    "en": "Quiz 1 q11-1"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-1-q11-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "자기지도학습에서 \"정답\"은 어디서 오나?",
+    "en": "Quiz 1 q11-2"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-1-q12-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "원본 도미 두 마리의 유클리드 거리 48.04에서 무게 차이(48)가 차지하는 몫에 가장 가까운 것은?",
+    "en": "Quiz 1 q12-1"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-1-q12-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "\"높이 ÷ 길이\" 같은 체형 비율로 거리를 재면 무엇이 달라지나?",
+    "en": "Quiz 1 q12-2"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-1-q13-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "무게 평균 391.9g, 표준편차 346.2g일 때 무게 738g의 z 값은?",
+    "en": "Quiz 1 q13-1"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-1-q13-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "표준화가 해결하지 못하는 문제는?",
+    "en": "Quiz 1 q13-2"
+   },
+   "page": "01_no_answer_key",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:concept/unsupervised-learning",
+   "p": "lab:broader",
+   "o": "lab:topic/unsupervised-learning",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/supervised-learning",
+   "p": "lab:broader",
+   "o": "lab:topic/supervised-learning",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/self-supervised-learning",
+   "p": "lab:broader",
+   "o": "lab:topic/self-supervised",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/feature",
+   "p": "lab:broader",
+   "o": "lab:topic/feature-engineering",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/euclidean-distance",
+   "p": "lab:broader",
+   "o": "lab:topic/knn",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/manhattan-distance",
+   "p": "lab:broader",
+   "o": "lab:topic/knn",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/body-ratio",
+   "p": "lab:broader",
+   "o": "lab:topic/feature-engineering",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/standardization",
+   "p": "lab:broader",
+   "o": "lab:topic/feature-engineering",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/unit-dominance",
+   "p": "lab:broader",
+   "o": "lab:topic/feature-engineering",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/redundant-features",
+   "p": "lab:broader",
+   "o": "lab:topic/feature-engineering",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/unsupervised-learning",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/supervised-learning",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/euclidean-distance",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/unit-dominance",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/unit-dominance",
+   "p": "lab:addressedBy",
+   "o": "lab:method/standardization",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/standardization",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/redundant-features",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/std-improves-neighbors",
+   "p": "lab:supports",
+   "o": "lab:method/standardization",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/manhattan-distance",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/euclidean-distance",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/body-ratio",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/euclidean-distance",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:sim/u1-standardize",
+   "p": "lab:demonstratedBy",
+   "o": "lab:method/standardization",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/feature",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/euclidean-distance",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/std-improves-neighbors",
+   "p": "lab:assertedIn",
+   "o": "lab:work/pyae2019fish",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/unsupervised-learning",
+   "p": "lab:explainedIn",
+   "o": "lab:work/ahn2026supervised",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/unsupervised-learning",
+   "p": "lab:explainedIn",
+   "o": "lab:work/ahn2026slides",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/unsupervised-learning",
+   "p": "lab:explainedIn",
+   "o": "lab:work/hastie2009elements",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-1-q11-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/unsupervised-learning",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-1-q11-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/unsupervised-learning",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-1-q12-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/euclidean-distance",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-1-q12-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/euclidean-distance",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-1-q13-1",
+   "p": "lab:assesses",
+   "o": "lab:method/standardization",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-1-q13-2",
+   "p": "lab:assesses",
+   "o": "lab:method/standardization",
+   "anchor": "#s3",
+   "confidence": "high"
+  }
+ ]
+}

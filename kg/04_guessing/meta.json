@@ -1,0 +1,43 @@
+{
+ "title": "4장 · 맞히기 — 자기지도학습",
+ "number": "4",
+ "series": "비지도학습 물고기 연구실 (unsupervised_fish_lab)",
+ "about": [
+  "lab:concept/self-supervised-learning",
+  "lab:method/autoencoder"
+ ],
+ "basedOn": [
+  "pyae2019fish",
+  "ahn2026slides",
+  "hinton2006reducing",
+  "devlin2019bert",
+  "cover1967nearest"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-21",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/unsupervised_fish_lab/04_guessing.html",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "domain": [
+  "ai"
+ ],
+ "suggestedCitation": "안상선 (2026). 4장 · 맞히기 — 자기지도학습. 비지도학습 물고기 연구실 (unsupervised_fish_lab) 4, v1.0."
+}

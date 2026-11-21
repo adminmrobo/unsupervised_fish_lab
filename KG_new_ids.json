@@ -1,0 +1,470 @@
+{
+ "series": "unsupervised_fish_lab",
+ "date": "2026-11-21",
+ "new_ids": {
+  "lab:concept/unsupervised-learning": {
+   "label": {
+    "ko": "비지도학습",
+    "en": "Unsupervised learning"
+   },
+   "type": "Concept",
+   "first_page": "index"
+  },
+  "lab:concept/supervised-learning": {
+   "label": {
+    "ko": "지도학습",
+    "en": "Supervised learning"
+   },
+   "type": "Concept",
+   "first_page": "index"
+  },
+  "lab:concept/self-supervised-learning": {
+   "label": {
+    "ko": "자기지도학습",
+    "en": "Self-supervised learning"
+   },
+   "type": "Concept",
+   "first_page": "index"
+  },
+  "lab:dataset/fish-market-x10": {
+   "label": {
+    "ko": "어시장 물고기 1,554마리 (증강)",
+    "en": "Fish Market augmented (1,554 fish)"
+   },
+   "type": "Dataset",
+   "first_page": "index"
+  },
+  "lab:claim/series-record": {
+   "label": {
+    "ko": "대결 전적 2승 2패 — 단순함도 큰 모델도 늘 정답은 아니다",
+    "en": "Duel record 2-2"
+   },
+   "type": "Claim",
+   "first_page": "index"
+  },
+  "lab:question/where-is-answer": {
+   "label": {
+    "ko": "정답표가 없어도 데이터 안에 숨은 모양을 찾을 수 있을까?",
+    "en": "Can we find structure without labels?"
+   },
+   "type": "Question",
+   "first_page": "index"
+  },
+  "lab:concept/feature": {
+   "label": {
+    "ko": "특성(측정값)",
+    "en": "Feature"
+   },
+   "type": "Concept",
+   "first_page": "01_no_answer_key"
+  },
+  "lab:concept/euclidean-distance": {
+   "label": {
+    "ko": "유클리드 거리",
+    "en": "Euclidean distance"
+   },
+   "type": "Concept",
+   "first_page": "01_no_answer_key"
+  },
+  "lab:concept/manhattan-distance": {
+   "label": {
+    "ko": "맨해튼 거리",
+    "en": "Manhattan distance"
+   },
+   "type": "Concept",
+   "first_page": "01_no_answer_key"
+  },
+  "lab:concept/body-ratio": {
+   "label": {
+    "ko": "체형 비율 (높이÷길이1)",
+    "en": "Body-shape ratio"
+   },
+   "type": "Concept",
+   "first_page": "01_no_answer_key"
+  },
+  "lab:method/standardization": {
+   "label": {
+    "ko": "표준화 (z 점수)",
+    "en": "Standardization"
+   },
+   "type": "Method",
+   "first_page": "01_no_answer_key"
+  },
+  "lab:limitation/unit-dominance": {
+   "label": {
+    "ko": "단위가 큰 변수가 거리를 독점",
+    "en": "Unit dominance in distance"
+   },
+   "type": "Limitation",
+   "first_page": "01_no_answer_key"
+  },
+  "lab:claim/std-improves-neighbors": {
+   "label": {
+    "ko": "표준화하면 이웃이 같은 종인 비율이 78.9%→92.3%",
+    "en": "Standardization raises same-species neighbor rate"
+   },
+   "type": "Claim",
+   "first_page": "01_no_answer_key"
+  },
+  "lab:limitation/redundant-features": {
+   "label": {
+    "ko": "같은 정보를 가진 변수의 중복 투표",
+    "en": "Redundant features"
+   },
+   "type": "Limitation",
+   "first_page": "01_no_answer_key"
+  },
+  "lab:sim/u1-standardize": {
+   "label": {
+    "ko": "원 단위 vs 표준화 실험장",
+    "en": "Raw vs standardized lab"
+   },
+   "type": "Simulation",
+   "first_page": "01_no_answer_key"
+  },
+  "lab:concept/clustering": {
+   "label": {
+    "ko": "군집화 (주머니 나누기)",
+    "en": "Clustering"
+   },
+   "type": "Concept",
+   "first_page": "02_grouping"
+  },
+  "lab:method/kmeans": {
+   "label": {
+    "ko": "k-평균",
+    "en": "k-means"
+   },
+   "type": "Method",
+   "first_page": "02_grouping"
+  },
+  "lab:concept/centroid": {
+   "label": {
+    "ko": "중심",
+    "en": "Centroid"
+   },
+   "type": "Concept",
+   "first_page": "02_grouping"
+  },
+  "lab:concept/inertia": {
+   "label": {
+    "ko": "안쪽 거리 합",
+    "en": "Inertia"
+   },
+   "type": "Metric",
+   "first_page": "02_grouping"
+  },
+  "lab:method/elbow": {
+   "label": {
+    "ko": "엘보 방법",
+    "en": "Elbow method"
+   },
+   "type": "Method",
+   "first_page": "02_grouping"
+  },
+  "lab:concept/silhouette": {
+   "label": {
+    "ko": "실루엣 점수",
+    "en": "Silhouette score"
+   },
+   "type": "Metric",
+   "first_page": "02_grouping"
+  },
+  "lab:method/hierarchical": {
+   "label": {
+    "ko": "계층 군집 (워드 연결)",
+    "en": "Hierarchical clustering (Ward)"
+   },
+   "type": "Method",
+   "first_page": "02_grouping"
+  },
+  "lab:concept/dendrogram": {
+   "label": {
+    "ko": "덴드로그램",
+    "en": "Dendrogram"
+   },
+   "type": "Concept",
+   "first_page": "02_grouping"
+  },
+  "lab:metric/ari": {
+   "label": {
+    "ko": "조정 랜드 지수 (대조 점수)",
+    "en": "Adjusted Rand index"
+   },
+   "type": "Metric",
+   "first_page": "02_grouping"
+  },
+  "lab:claim/three-body-shapes": {
+   "label": {
+    "ko": "체형 비율로 나누면 납작·중간·길쭉 세 갈래 (k=3, 실루엣 0.68)",
+    "en": "Three body shapes emerge"
+   },
+   "type": "Claim",
+   "first_page": "02_grouping"
+  },
+  "lab:claim/raw-clusters-by-size": {
+   "label": {
+    "ko": "원 단위 측정값으로 나누면 크기로 갈려 대조 점수 0.109",
+    "en": "Raw features cluster by size"
+   },
+   "type": "Claim",
+   "first_page": "02_grouping"
+  },
+  "lab:limitation/kmeans-init": {
+   "label": {
+    "ko": "k 지정·시작 위치·둥근 모양 가정",
+    "en": "k-means needs k and is init-sensitive"
+   },
+   "type": "Limitation",
+   "first_page": "02_grouping"
+  },
+  "lab:limitation/cluster-not-species": {
+   "label": {
+    "ko": "주머니는 닮음이지 정체가 아니다",
+    "en": "Clusters are not species"
+   },
+   "type": "Limitation",
+   "first_page": "02_grouping"
+  },
+  "lab:sim/u2-kmeans": {
+   "label": {
+    "ko": "k-평균 네 걸음 실험장",
+    "en": "k-means stepper"
+   },
+   "type": "Simulation",
+   "first_page": "02_grouping"
+  },
+  "lab:concept/dimensionality-reduction": {
+   "label": {
+    "ko": "차원 축소 (접기)",
+    "en": "Dimensionality reduction"
+   },
+   "type": "Concept",
+   "first_page": "03_folding"
+  },
+  "lab:concept/correlation": {
+   "label": {
+    "ko": "상관계수",
+    "en": "Correlation"
+   },
+   "type": "Concept",
+   "first_page": "03_folding"
+  },
+  "lab:concept/projection": {
+   "label": {
+    "ko": "투영 (그림자)",
+    "en": "Projection"
+   },
+   "type": "Concept",
+   "first_page": "03_folding"
+  },
+  "lab:method/pca": {
+   "label": {
+    "ko": "주성분 분석 (PCA)",
+    "en": "Principal component analysis"
+   },
+   "type": "Method",
+   "first_page": "03_folding"
+  },
+  "lab:concept/eigenvalue": {
+   "label": {
+    "ko": "고유값·고유벡터",
+    "en": "Eigenvalue and eigenvector"
+   },
+   "type": "Concept",
+   "first_page": "03_folding"
+  },
+  "lab:metric/explained-variance": {
+   "label": {
+    "ko": "설명된 분산",
+    "en": "Explained variance ratio"
+   },
+   "type": "Metric",
+   "first_page": "03_folding"
+  },
+  "lab:claim/two-axes-96": {
+   "label": {
+    "ko": "두 축(PC1+PC2)이 흔들림의 96.1%를 남김 (PC1 87.6%)",
+    "en": "Two axes keep 96.1% of variance"
+   },
+   "type": "Claim",
+   "first_page": "03_folding"
+  },
+  "lab:claim/size-shape-axes": {
+   "label": {
+    "ko": "PC1은 크기, PC2는 체형 축",
+    "en": "PC1 = size, PC2 = body shape"
+   },
+   "type": "Claim",
+   "first_page": "03_folding"
+  },
+  "lab:concept/reconstruction": {
+   "label": {
+    "ko": "복원과 복원 오차",
+    "en": "Reconstruction error"
+   },
+   "type": "Concept",
+   "first_page": "03_folding"
+  },
+  "lab:limitation/linear-folding": {
+   "label": {
+    "ko": "곧은 접기는 휜 관계(무게)를 놓침",
+    "en": "Linear folding misses curved relations"
+   },
+   "type": "Limitation",
+   "first_page": "03_folding"
+  },
+  "lab:claim/folding-loses-neighbors": {
+   "label": {
+    "ko": "두 축 지도는 이웃 일치율 79.6%, 여섯 축은 92.3%",
+    "en": "Folding loses neighbor fidelity"
+   },
+   "type": "Claim",
+   "first_page": "03_folding"
+  },
+  "lab:concept/eigenface": {
+   "label": {
+    "ko": "고유 얼굴",
+    "en": "Eigenface"
+   },
+   "type": "Concept",
+   "first_page": "03_folding"
+  },
+  "lab:sim/u3-shadow": {
+   "label": {
+    "ko": "그림자 방향 찾기 실험장",
+    "en": "Projection angle lab"
+   },
+   "type": "Simulation",
+   "first_page": "03_folding"
+  },
+  "lab:method/masked-modeling": {
+   "label": {
+    "ko": "마스크드 모델링 (가린 무게 맞히기)",
+    "en": "Masked modeling"
+   },
+   "type": "Method",
+   "first_page": "04_guessing"
+  },
+  "lab:claim/weight-volume-law": {
+   "label": {
+    "ko": "가린 무게 규칙의 지수 합 ≈ 3 (부피처럼 자람), 시험 평균 빗나감 48.7g",
+    "en": "Weight scales like volume"
+   },
+   "type": "Claim",
+   "first_page": "04_guessing"
+  },
+  "lab:method/autoencoder": {
+   "label": {
+    "ko": "오토인코더",
+    "en": "Autoencoder"
+   },
+   "type": "Method",
+   "first_page": "04_guessing"
+  },
+  "lab:concept/bottleneck": {
+   "label": {
+    "ko": "병목",
+    "en": "Bottleneck"
+   },
+   "type": "Concept",
+   "first_page": "04_guessing"
+  },
+  "lab:claim/ae-beats-pca": {
+   "label": {
+    "ko": "시험 복원 오차: 오토인코더 0.0102, PCA 0.0581",
+    "en": "Autoencoder reconstructs better than PCA"
+   },
+   "type": "Claim",
+   "first_page": "04_guessing"
+  },
+  "lab:method/map-knn": {
+   "label": {
+    "ko": "지도 위 이웃 찾기 (k-NN)",
+    "en": "k-NN on the latent map"
+   },
+   "type": "Method",
+   "first_page": "04_guessing"
+  },
+  "lab:claim/map-knn-acc": {
+   "label": {
+    "ko": "이름표 없이 그린 지도 위 이웃 5마리 정답률 83.1%, 이름표 7장만이면 45.9%",
+    "en": "Latent-map k-NN accuracy"
+   },
+   "type": "Claim",
+   "first_page": "04_guessing"
+  },
+  "lab:method/ood-alarm": {
+   "label": {
+    "ko": "배운 범위 밖 경보 (지도 거리 + 네 축 복원 오차)",
+    "en": "Out-of-distribution alarm"
+   },
+   "type": "Method",
+   "first_page": "04_guessing"
+  },
+  "lab:limitation/confident-wrong": {
+   "label": {
+    "ko": "다수결은 범위 밖에서도 자신 있게 답한다",
+    "en": "Confident answers out of range"
+   },
+   "type": "Limitation",
+   "first_page": "04_guessing"
+  },
+  "lab:limitation/distribution-shift": {
+   "label": {
+    "ko": "측정 기준이 바뀌면 지도 밖으로 접힘",
+    "en": "Measurement shift"
+   },
+   "type": "Limitation",
+   "first_page": "04_guessing"
+  },
+  "lab:sim/u4-checkstation": {
+   "label": {
+    "ko": "범위 밖 알아차리기 실험장",
+    "en": "OOD lab"
+   },
+   "type": "Simulation",
+   "first_page": "04_guessing"
+  },
+  "lab:sim/practice-shelf": {
+   "label": {
+    "ko": "진열대 정리 (군집 시뮬레이터)",
+    "en": "Shelf clustering simulator"
+   },
+   "type": "Simulation",
+   "first_page": "practice"
+  },
+  "lab:sim/practice-map": {
+   "label": {
+    "ko": "물고기 지도 만들기 (PCA 시뮬레이터)",
+    "en": "PCA map simulator"
+   },
+   "type": "Simulation",
+   "first_page": "practice"
+  },
+  "lab:sim/practice-check": {
+   "label": {
+    "ko": "검수대 (범위 밖·가린 무게 시뮬레이터)",
+    "en": "Inspection station simulator"
+   },
+   "type": "Simulation",
+   "first_page": "practice"
+  },
+  "lab:question/robust-conclusion": {
+   "label": {
+    "ko": "조건이 바뀌어도 결론이 유지되나?",
+    "en": "Is the conclusion robust?"
+   },
+   "type": "Question",
+   "first_page": "practice"
+  },
+  "lab:limitation/threshold-tradeoff": {
+   "label": {
+    "ko": "문턱을 낮추면 괜한 경보, 높이면 놓침",
+    "en": "Alarm threshold trade-off"
+   },
+   "type": "Limitation",
+   "first_page": "practice"
+  }
+ }
+}

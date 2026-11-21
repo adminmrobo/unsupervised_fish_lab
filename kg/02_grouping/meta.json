@@ -1,0 +1,43 @@
+{
+ "title": "2장 · 묶기 — 군집화",
+ "number": "2",
+ "series": "비지도학습 물고기 연구실 (unsupervised_fish_lab)",
+ "about": [
+  "lab:concept/clustering",
+  "lab:method/kmeans"
+ ],
+ "basedOn": [
+  "pyae2019fish",
+  "ahn2026slides",
+  "lloyd1982least",
+  "rousseeuw1987silhouettes",
+  "ward1963hierarchical"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-21",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/unsupervised_fish_lab/02_grouping.html",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "domain": [
+  "ai"
+ ],
+ "suggestedCitation": "안상선 (2026). 2장 · 묶기 — 군집화. 비지도학습 물고기 연구실 (unsupervised_fish_lab) 2, v1.0."
+}

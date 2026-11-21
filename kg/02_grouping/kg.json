@@ -1,0 +1,795 @@
+{
+ "version": "1.0",
+ "page": "02_grouping",
+ "nodes": [
+  {
+   "id": "lab:concept/clustering",
+   "type": "Concept",
+   "label": {
+    "ko": "군집화 (주머니 나누기)",
+    "en": "Clustering"
+   },
+   "page": "02_grouping",
+   "anchor": "#map",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "정답 없이 비슷한 것끼리 무리로 나누는 일"
+   }
+  },
+  {
+   "id": "lab:method/kmeans",
+   "type": "Method",
+   "label": {
+    "ko": "k-평균",
+    "en": "k-means"
+   },
+   "page": "02_grouping",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "중심 k개를 놓고 배정과 평균 이동을 반복"
+   },
+   "source": [
+    {
+     "ref": "lloyd1982least",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:concept/centroid",
+   "type": "Concept",
+   "label": {
+    "ko": "중심",
+    "en": "Centroid"
+   },
+   "page": "02_grouping",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "주머니 안 점들의 평균 위치"
+   }
+  },
+  {
+   "id": "lab:concept/inertia",
+   "type": "Metric",
+   "label": {
+    "ko": "안쪽 거리 합",
+    "en": "Inertia"
+   },
+   "page": "02_grouping",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "각 점과 자기 중심 사이 거리 제곱의 합"
+   }
+  },
+  {
+   "id": "lab:method/elbow",
+   "type": "Method",
+   "label": {
+    "ko": "엘보 방법",
+    "en": "Elbow method"
+   },
+   "page": "02_grouping",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "안쪽 거리 합이 줄어드는 폭이 꺾이는 k를 고름"
+   }
+  },
+  {
+   "id": "lab:concept/silhouette",
+   "type": "Metric",
+   "label": {
+    "ko": "실루엣 점수",
+    "en": "Silhouette score"
+   },
+   "page": "02_grouping",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "(b−a)÷max(a,b), −1~+1"
+   },
+   "source": [
+    {
+     "ref": "rousseeuw1987silhouettes",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:method/hierarchical",
+   "type": "Method",
+   "label": {
+    "ko": "계층 군집 (워드 연결)",
+    "en": "Hierarchical clustering (Ward)"
+   },
+   "page": "02_grouping",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "흩어짐이 가장 적게 느는 쌍부터 합쳐 족보 나무를 만듦"
+   },
+   "source": [
+    {
+     "ref": "ward1963hierarchical",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:concept/dendrogram",
+   "type": "Concept",
+   "label": {
+    "ko": "덴드로그램",
+    "en": "Dendrogram"
+   },
+   "page": "02_grouping",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "합친 기록을 그린 족보 나무"
+   }
+  },
+  {
+   "id": "lab:metric/ari",
+   "type": "Metric",
+   "label": {
+    "ko": "조정 랜드 지수 (대조 점수)",
+    "en": "Adjusted Rand index"
+   },
+   "page": "02_grouping",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "주머니와 이름표가 얼마나 같은지 재는 점수"
+   }
+  },
+  {
+   "id": "lab:claim/three-body-shapes",
+   "type": "Claim",
+   "label": {
+    "ko": "체형 비율로 나누면 납작·중간·길쭉 세 갈래 (k=3, 실루엣 0.68)",
+    "en": "Three body shapes emerge"
+   },
+   "page": "02_grouping",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "pyae2019fish",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/raw-clusters-by-size",
+   "type": "Claim",
+   "label": {
+    "ko": "원 단위 측정값으로 나누면 크기로 갈려 대조 점수 0.109",
+    "en": "Raw features cluster by size"
+   },
+   "page": "02_grouping",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/kmeans-init",
+   "type": "Limitation",
+   "label": {
+    "ko": "k 지정·시작 위치·둥근 모양 가정",
+    "en": "k-means needs k and is init-sensitive"
+   },
+   "page": "02_grouping",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/cluster-not-species",
+   "type": "Limitation",
+   "label": {
+    "ko": "주머니는 닮음이지 정체가 아니다",
+    "en": "Clusters are not species"
+   },
+   "page": "02_grouping",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:sim/u2-kmeans",
+   "type": "Simulation",
+   "label": {
+    "ko": "k-평균 네 걸음 실험장",
+    "en": "k-means stepper"
+   },
+   "page": "02_grouping",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/pyae2019fish",
+   "type": "Work",
+   "label": {
+    "ko": "Pyae (n.d.) Kaggle",
+    "en": "Fish market [Dataset]"
+   },
+   "page": "02_grouping",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/ahn2026slides",
+   "type": "Work",
+   "label": {
+    "ko": "안 (2026) (주)M-Robo",
+    "en": "라벨링 없이 맞추는 AI — 비지도학습 모델 (강의 슬라이드)"
+   },
+   "page": "02_grouping",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/lloyd1982least",
+   "type": "Work",
+   "label": {
+    "ko": "Lloyd (1982) IEEE Transactions on Information Theory",
+    "en": "Least squares quantization in PCM"
+   },
+   "page": "02_grouping",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/rousseeuw1987silhouettes",
+   "type": "Work",
+   "label": {
+    "ko": "Rousseeuw (1987) Journal of Computational and Applied Mathematics",
+    "en": "Silhouettes: A graphical aid to the interpretation and validation of cluster analysis"
+   },
+   "page": "02_grouping",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/ward1963hierarchical",
+   "type": "Work",
+   "label": {
+    "ko": "Ward (1963) Journal of the American Statistical Association",
+    "en": "Hierarchical grouping to optimize an objective function"
+   },
+   "page": "02_grouping",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-2-q21-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "k-평균의 한 걸음에서 중심은 어디로 옮기나?",
+    "en": "Quiz 2 q21-1"
+   },
+   "page": "02_grouping",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-2-q21-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "KNN의 k와 k-평균의 k는?",
+    "en": "Quiz 2 q21-2"
+   },
+   "page": "02_grouping",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-2-q22-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "안쪽 거리 합이 k=2에서 1,214.9, k=3에서 410.3, k=4에서 257.8이다. k=3→4에서 ",
+    "en": "Quiz 2 q22-1"
+   },
+   "page": "02_grouping",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-2-q22-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "안쪽 거리 합이 가장 작은 k를 고르면 안 되는 이유는?",
+    "en": "Quiz 2 q22-2"
+   },
+   "page": "02_grouping",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-2-q23-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "a = 0.5, b = 2.0일 때 실루엣 s는?",
+    "en": "Quiz 2 q23-1"
+   },
+   "page": "02_grouping",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-2-q23-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "실루엣이 음수인 점은?",
+    "en": "Quiz 2 q23-2"
+   },
+   "page": "02_grouping",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-2-q24-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "계층 군집에서 주머니 수를 정하는 것은?",
+    "en": "Quiz 2 q24-1"
+   },
+   "page": "02_grouping",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-2-q24-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "{1}과 {2}를 합치는 비용(0.5)과 {1,2}와 {9}를 합치는 비용(37.5) 중 먼저 합치는 것은?",
+    "en": "Quiz 2 q24-2"
+   },
+   "page": "02_grouping",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-2-q25-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "체형 비율로 나눈 \"납작한 주머니\"에 함께 들어간 두 종은?",
+    "en": "Quiz 2 q25-1"
+   },
+   "page": "02_grouping",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-2-q25-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "같은 k=3인데 원 단위 측정값 여섯 개로 나누면 이름표와의 대조 점수가 0.109로 낮다. 가장 큰 이유는",
+    "en": "Quiz 2 q25-2"
+   },
+   "page": "02_grouping",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:concept/clustering",
+   "p": "lab:broader",
+   "o": "lab:topic/clustering",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/kmeans",
+   "p": "lab:broader",
+   "o": "lab:topic/clustering",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/centroid",
+   "p": "lab:broader",
+   "o": "lab:topic/clustering",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/elbow",
+   "p": "lab:broader",
+   "o": "lab:topic/clustering",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/hierarchical",
+   "p": "lab:broader",
+   "o": "lab:topic/clustering",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/dendrogram",
+   "p": "lab:broader",
+   "o": "lab:topic/clustering",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/kmeans-init",
+   "p": "lab:broader",
+   "o": "lab:topic/clustering",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/cluster-not-species",
+   "p": "lab:broader",
+   "o": "lab:topic/clustering",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/kmeans",
+   "p": "lab:partOf",
+   "o": "lab:concept/clustering",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/centroid",
+   "p": "lab:partOf",
+   "o": "lab:method/kmeans",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/kmeans",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/kmeans-init",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/kmeans-init",
+   "p": "lab:addressedBy",
+   "o": "lab:method/elbow",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/elbow",
+   "p": "lab:measuredBy",
+   "o": "lab:concept/inertia",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/kmeans",
+   "p": "lab:evaluatedBy",
+   "o": "lab:concept/silhouette",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/kmeans-init",
+   "p": "lab:addressedBy",
+   "o": "lab:method/hierarchical",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/hierarchical",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/kmeans",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/dendrogram",
+   "p": "lab:partOf",
+   "o": "lab:method/hierarchical",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/three-body-shapes",
+   "p": "lab:supports",
+   "o": "lab:method/kmeans",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/three-body-shapes",
+   "p": "lab:evaluatedBy",
+   "o": "lab:metric/ari",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/raw-clusters-by-size",
+   "p": "lab:supports",
+   "o": "lab:limitation/cluster-not-species",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/clustering",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/cluster-not-species",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:sim/u2-kmeans",
+   "p": "lab:demonstratedBy",
+   "o": "lab:method/kmeans",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/kmeans",
+   "p": "lab:assertedIn",
+   "o": "lab:work/lloyd1982least",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/silhouette",
+   "p": "lab:assertedIn",
+   "o": "lab:work/rousseeuw1987silhouettes",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/hierarchical",
+   "p": "lab:assertedIn",
+   "o": "lab:work/ward1963hierarchical",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/three-body-shapes",
+   "p": "lab:assertedIn",
+   "o": "lab:work/pyae2019fish",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/clustering",
+   "p": "lab:explainedIn",
+   "o": "lab:work/ahn2026slides",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-2-q21-1",
+   "p": "lab:assesses",
+   "o": "lab:method/kmeans",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-2-q21-2",
+   "p": "lab:assesses",
+   "o": "lab:method/kmeans",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-2-q22-1",
+   "p": "lab:assesses",
+   "o": "lab:method/elbow",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-2-q22-2",
+   "p": "lab:assesses",
+   "o": "lab:method/elbow",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-2-q23-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/silhouette",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-2-q23-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/silhouette",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-2-q24-1",
+   "p": "lab:assesses",
+   "o": "lab:method/hierarchical",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-2-q24-2",
+   "p": "lab:assesses",
+   "o": "lab:method/hierarchical",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-2-q25-1",
+   "p": "lab:assesses",
+   "o": "lab:claim/three-body-shapes",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-2-q25-2",
+   "p": "lab:assesses",
+   "o": "lab:claim/three-body-shapes",
+   "anchor": "#s5",
+   "confidence": "high"
+  }
+ ]
+}

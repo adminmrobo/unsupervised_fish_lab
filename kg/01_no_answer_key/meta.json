@@ -1,0 +1,42 @@
+{
+ "title": "1장 · 정답표 없이 배운다 — 거리와 표준화",
+ "number": "1",
+ "series": "비지도학습 물고기 연구실 (unsupervised_fish_lab)",
+ "about": [
+  "lab:concept/unsupervised-learning",
+  "lab:method/standardization"
+ ],
+ "basedOn": [
+  "pyae2019fish",
+  "ahn2026supervised",
+  "ahn2026slides",
+  "hastie2009elements"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-21",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/unsupervised_fish_lab/01_no_answer_key.html",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "domain": [
+  "ai"
+ ],
+ "suggestedCitation": "안상선 (2026). 1장 · 정답표 없이 배운다 — 거리와 표준화. 비지도학습 물고기 연구실 (unsupervised_fish_lab) 1, v1.0."
+}

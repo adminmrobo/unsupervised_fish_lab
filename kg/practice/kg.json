@@ -1,0 +1,207 @@
+{
+ "version": "1.0",
+ "page": "practice/index",
+ "nodes": [
+  {
+   "id": "lab:sim/practice-shelf",
+   "type": "Simulation",
+   "label": {
+    "ko": "진열대 정리 (군집 시뮬레이터)",
+    "en": "Shelf clustering simulator"
+   },
+   "page": "practice/index",
+   "anchor": "#shelf",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "자와 진열대 수를 고르고 실루엣·대조 점수 확인"
+   }
+  },
+  {
+   "id": "lab:sim/practice-map",
+   "type": "Simulation",
+   "label": {
+    "ko": "물고기 지도 만들기 (PCA 시뮬레이터)",
+    "en": "PCA map simulator"
+   },
+   "page": "practice/index",
+   "anchor": "#map",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "표준화·축 수·변수 세트를 바꿔 남긴 흔들림 확인"
+   }
+  },
+  {
+   "id": "lab:sim/practice-check",
+   "type": "Simulation",
+   "label": {
+    "ko": "검수대 (범위 밖·가린 무게 시뮬레이터)",
+    "en": "Inspection station simulator"
+   },
+   "page": "practice/index",
+   "anchor": "#check",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "문턱을 바꿔 이상 물고기와 괜한 경보 확인"
+   }
+  },
+  {
+   "id": "lab:question/robust-conclusion",
+   "type": "Question",
+   "label": {
+    "ko": "조건이 바뀌어도 결론이 유지되나?",
+    "en": "Is the conclusion robust?"
+   },
+   "page": "practice/index",
+   "anchor": "#close",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/threshold-tradeoff",
+   "type": "Limitation",
+   "label": {
+    "ko": "문턱을 낮추면 괜한 경보, 높이면 놓침",
+    "en": "Alarm threshold trade-off"
+   },
+   "page": "practice/index",
+   "anchor": "#check",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/pyae2019fish",
+   "type": "Work",
+   "label": {
+    "ko": "Pyae (n.d.) Kaggle",
+    "en": "Fish market [Dataset]"
+   },
+   "page": "practice/index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/ahn2026slides",
+   "type": "Work",
+   "label": {
+    "ko": "안 (2026) (주)M-Robo",
+    "en": "라벨링 없이 맞추는 AI — 비지도학습 모델 (강의 슬라이드)"
+   },
+   "page": "practice/index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:sim/practice-shelf",
+   "p": "lab:demonstratedBy",
+   "o": "lab:topic/clustering",
+   "anchor": "#shelf",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:sim/practice-map",
+   "p": "lab:demonstratedBy",
+   "o": "lab:topic/pca",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:sim/practice-check",
+   "p": "lab:demonstratedBy",
+   "o": "lab:topic/anomaly-detection",
+   "anchor": "#check",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/threshold-tradeoff",
+   "p": "lab:broader",
+   "o": "lab:topic/anomaly-detection",
+   "anchor": "#check",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:sim/practice-check",
+   "p": "lab:raises",
+   "o": "lab:limitation/threshold-tradeoff",
+   "anchor": "#check",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/robust-conclusion",
+   "p": "lab:addressedBy",
+   "o": "lab:sim/practice-shelf",
+   "anchor": "#close",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/robust-conclusion",
+   "p": "lab:addressedBy",
+   "o": "lab:sim/practice-map",
+   "anchor": "#close",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/robust-conclusion",
+   "p": "lab:addressedBy",
+   "o": "lab:sim/practice-check",
+   "anchor": "#close",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:sim/practice-shelf",
+   "p": "lab:explainedIn",
+   "o": "lab:work/pyae2019fish",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:sim/practice-shelf",
+   "p": "lab:explainedIn",
+   "o": "lab:work/ahn2026slides",
+   "anchor": "#export",
+   "confidence": "high"
+  }
+ ]
+}

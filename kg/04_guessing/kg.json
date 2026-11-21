@@ -1,0 +1,678 @@
+{
+ "version": "1.0",
+ "page": "04_guessing",
+ "nodes": [
+  {
+   "id": "lab:concept/self-supervised-learning",
+   "type": "Concept",
+   "label": {
+    "ko": "자기지도학습",
+    "en": "Self-supervised learning"
+   },
+   "page": "04_guessing",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "일부를 가리고 맞히게 해 데이터 자신을 정답으로 씀"
+   }
+  },
+  {
+   "id": "lab:method/masked-modeling",
+   "type": "Method",
+   "label": {
+    "ko": "마스크드 모델링 (가린 무게 맞히기)",
+    "en": "Masked modeling"
+   },
+   "page": "04_guessing",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "값 하나를 가리고 나머지로 맞힘"
+   },
+   "source": [
+    {
+     "ref": "devlin2019bert",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/weight-volume-law",
+   "type": "Claim",
+   "label": {
+    "ko": "가린 무게 규칙의 지수 합 ≈ 3 (부피처럼 자람), 시험 평균 빗나감 48.7g",
+    "en": "Weight scales like volume"
+   },
+   "page": "04_guessing",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "pyae2019fish",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:method/autoencoder",
+   "type": "Method",
+   "label": {
+    "ko": "오토인코더",
+    "en": "Autoencoder"
+   },
+   "page": "04_guessing",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "여섯 값→두 숫자→여섯 값으로 자신을 되살리도록 배우는 신경망"
+   },
+   "source": [
+    {
+     "ref": "hinton2006reducing",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:concept/bottleneck",
+   "type": "Concept",
+   "label": {
+    "ko": "병목",
+    "en": "Bottleneck"
+   },
+   "page": "04_guessing",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "가운데 좁은 자리, 중요한 것만 남김"
+   }
+  },
+  {
+   "id": "lab:claim/ae-beats-pca",
+   "type": "Claim",
+   "label": {
+    "ko": "시험 복원 오차: 오토인코더 0.0102, PCA 0.0581",
+    "en": "Autoencoder reconstructs better than PCA"
+   },
+   "page": "04_guessing",
+   "anchor": "#duel",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/map-knn",
+   "type": "Method",
+   "label": {
+    "ko": "지도 위 이웃 찾기 (k-NN)",
+    "en": "k-NN on the latent map"
+   },
+   "page": "04_guessing",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "이웃 다섯의 이름표로 다수결, 이름표는 판단할 때만"
+   },
+   "source": [
+    {
+     "ref": "cover1967nearest",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/map-knn-acc",
+   "type": "Claim",
+   "label": {
+    "ko": "이름표 없이 그린 지도 위 이웃 5마리 정답률 83.1%, 이름표 7장만이면 45.9%",
+    "en": "Latent-map k-NN accuracy"
+   },
+   "page": "04_guessing",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/ood-alarm",
+   "type": "Method",
+   "label": {
+    "ko": "배운 범위 밖 경보 (지도 거리 + 네 축 복원 오차)",
+    "en": "Out-of-distribution alarm"
+   },
+   "page": "04_guessing",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "두 자 중 하나라도 문턱(상위 1%)을 넘으면 답 보류"
+   }
+  },
+  {
+   "id": "lab:limitation/confident-wrong",
+   "type": "Limitation",
+   "label": {
+    "ko": "다수결은 범위 밖에서도 자신 있게 답한다",
+    "en": "Confident answers out of range"
+   },
+   "page": "04_guessing",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/distribution-shift",
+   "type": "Limitation",
+   "label": {
+    "ko": "측정 기준이 바뀌면 지도 밖으로 접힘",
+    "en": "Measurement shift"
+   },
+   "page": "04_guessing",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:sim/u4-checkstation",
+   "type": "Simulation",
+   "label": {
+    "ko": "범위 밖 알아차리기 실험장",
+    "en": "OOD lab"
+   },
+   "page": "04_guessing",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/pyae2019fish",
+   "type": "Work",
+   "label": {
+    "ko": "Pyae (n.d.) Kaggle",
+    "en": "Fish market [Dataset]"
+   },
+   "page": "04_guessing",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/ahn2026slides",
+   "type": "Work",
+   "label": {
+    "ko": "안 (2026) (주)M-Robo",
+    "en": "라벨링 없이 맞추는 AI — 비지도학습 모델 (강의 슬라이드)"
+   },
+   "page": "04_guessing",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/hinton2006reducing",
+   "type": "Work",
+   "label": {
+    "ko": "Hinton 외 (2006) Science",
+    "en": "Reducing the dimensionality of data with neural networks"
+   },
+   "page": "04_guessing",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/devlin2019bert",
+   "type": "Work",
+   "label": {
+    "ko": "Devlin 외 (2019) NAACL-HLT 2019",
+    "en": "BERT: Pre-training of deep bidirectional transformers for language understanding"
+   },
+   "page": "04_guessing",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/cover1967nearest",
+   "type": "Work",
+   "label": {
+    "ko": "Cover 외 (1967) IEEE Transactions on Information Theory",
+    "en": "Nearest neighbor pattern classification"
+   },
+   "page": "04_guessing",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-4-q41-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "가린 무게 맞히기에서 \"정답\"은 누가 만들었나?",
+    "en": "Quiz 4 q41-1"
+   },
+   "page": "04_guessing",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-4-q41-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "맞히는 규칙의 세 지수(1.364, 0.638, 0.991)를 더하면 약 3이다. 무슨 뜻인가?",
+    "en": "Quiz 4 q41-2"
+   },
+   "page": "04_guessing",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-4-q42-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "오토인코더를 학습할 때 정답으로 주는 것은?",
+    "en": "Quiz 4 q42-1"
+   },
+   "page": "04_guessing",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-4-q42-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "병목을 아주 넓게(예: 숫자 6개 이상) 두면?",
+    "en": "Quiz 4 q42-2"
+   },
+   "page": "04_guessing",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-4-q43-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "이웃 5마리가 농어·농어·로치·농어·흰송어일 때 답과 확신은?",
+    "en": "Quiz 4 q43-1"
+   },
+   "page": "04_guessing",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-4-q43-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "이 단계에서 이름표는 언제 썼나?",
+    "en": "Quiz 4 q43-2"
+   },
+   "page": "04_guessing",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-4-q44-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "문턱이 0.228이고 새 물고기의 가장 가까운 이웃 거리가 2.28이면?",
+    "en": "Quiz 4 q44-1"
+   },
+   "page": "04_guessing",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-4-q44-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "다수결 확신이 100%인데도 답을 보류해야 하는 경우는?",
+    "en": "Quiz 4 q44-2"
+   },
+   "page": "04_guessing",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:concept/self-supervised-learning",
+   "p": "lab:broader",
+   "o": "lab:topic/self-supervised",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/masked-modeling",
+   "p": "lab:broader",
+   "o": "lab:topic/self-supervised",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/autoencoder",
+   "p": "lab:broader",
+   "o": "lab:topic/autoencoder",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/bottleneck",
+   "p": "lab:broader",
+   "o": "lab:topic/autoencoder",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/map-knn",
+   "p": "lab:broader",
+   "o": "lab:topic/knn",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/ood-alarm",
+   "p": "lab:broader",
+   "o": "lab:topic/anomaly-detection",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/confident-wrong",
+   "p": "lab:broader",
+   "o": "lab:topic/anomaly-detection",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/distribution-shift",
+   "p": "lab:broader",
+   "o": "lab:topic/distribution-shift",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/masked-modeling",
+   "p": "lab:partOf",
+   "o": "lab:concept/self-supervised-learning",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/weight-volume-law",
+   "p": "lab:supports",
+   "o": "lab:method/masked-modeling",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/autoencoder",
+   "p": "lab:partOf",
+   "o": "lab:concept/self-supervised-learning",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/bottleneck",
+   "p": "lab:partOf",
+   "o": "lab:method/autoencoder",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/ae-beats-pca",
+   "p": "lab:supports",
+   "o": "lab:method/autoencoder",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/map-knn-acc",
+   "p": "lab:supports",
+   "o": "lab:method/map-knn",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/map-knn",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/confident-wrong",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/confident-wrong",
+   "p": "lab:addressedBy",
+   "o": "lab:method/ood-alarm",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/distribution-shift",
+   "p": "lab:addressedBy",
+   "o": "lab:method/ood-alarm",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:sim/u4-checkstation",
+   "p": "lab:demonstratedBy",
+   "o": "lab:method/ood-alarm",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/masked-modeling",
+   "p": "lab:assertedIn",
+   "o": "lab:work/devlin2019bert",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/weight-volume-law",
+   "p": "lab:assertedIn",
+   "o": "lab:work/pyae2019fish",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/autoencoder",
+   "p": "lab:assertedIn",
+   "o": "lab:work/hinton2006reducing",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/map-knn",
+   "p": "lab:assertedIn",
+   "o": "lab:work/cover1967nearest",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/self-supervised-learning",
+   "p": "lab:explainedIn",
+   "o": "lab:work/ahn2026slides",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-4-q41-1",
+   "p": "lab:assesses",
+   "o": "lab:method/masked-modeling",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-4-q41-2",
+   "p": "lab:assesses",
+   "o": "lab:method/masked-modeling",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-4-q42-1",
+   "p": "lab:assesses",
+   "o": "lab:method/autoencoder",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-4-q42-2",
+   "p": "lab:assesses",
+   "o": "lab:method/autoencoder",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-4-q43-1",
+   "p": "lab:assesses",
+   "o": "lab:method/map-knn",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-4-q43-2",
+   "p": "lab:assesses",
+   "o": "lab:method/map-knn",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-4-q44-1",
+   "p": "lab:assesses",
+   "o": "lab:method/ood-alarm",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-4-q44-2",
+   "p": "lab:assesses",
+   "o": "lab:method/ood-alarm",
+   "anchor": "#s4",
+   "confidence": "high"
+  }
+ ]
+}

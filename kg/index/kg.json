@@ -1,0 +1,278 @@
+{
+ "version": "1.0",
+ "page": "index",
+ "nodes": [
+  {
+   "id": "lab:concept/unsupervised-learning",
+   "type": "Concept",
+   "label": {
+    "ko": "비지도학습",
+    "en": "Unsupervised learning"
+   },
+   "page": "index",
+   "anchor": "#compare",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "정답 없이 입력만으로 데이터의 구조를 찾는 학습"
+   }
+  },
+  {
+   "id": "lab:concept/supervised-learning",
+   "type": "Concept",
+   "label": {
+    "ko": "지도학습",
+    "en": "Supervised learning"
+   },
+   "page": "index",
+   "anchor": "#compare",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "입력과 정답을 함께 주고 정답을 맞히도록 배우는 학습"
+   }
+  },
+  {
+   "id": "lab:concept/self-supervised-learning",
+   "type": "Concept",
+   "label": {
+    "ko": "자기지도학습",
+    "en": "Self-supervised learning"
+   },
+   "page": "index",
+   "anchor": "#toc",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "데이터 일부를 가리고 맞히게 해 데이터 자신을 정답으로 쓰는 학습"
+   }
+  },
+  {
+   "id": "lab:dataset/fish-market-x10",
+   "type": "Dataset",
+   "label": {
+    "ko": "어시장 물고기 1,554마리 (증강)",
+    "en": "Fish Market augmented (1,554 fish)"
+   },
+   "page": "index",
+   "anchor": "#data",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "Kaggle Fish Market 159마리를 종별 평균·분산을 지키며 늘린 데이터"
+   },
+   "source": [
+    {
+     "ref": "ahn2026supervised",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/series-record",
+   "type": "Claim",
+   "label": {
+    "ko": "대결 전적 2승 2패 — 단순함도 큰 모델도 늘 정답은 아니다",
+    "en": "Duel record 2-2"
+   },
+   "page": "index",
+   "anchor": "#record",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/where-is-answer",
+   "type": "Question",
+   "label": {
+    "ko": "정답표가 없어도 데이터 안에 숨은 모양을 찾을 수 있을까?",
+    "en": "Can we find structure without labels?"
+   },
+   "page": "index",
+   "anchor": "#first",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/pyae2019fish",
+   "type": "Work",
+   "label": {
+    "ko": "Pyae (n.d.) Kaggle",
+    "en": "Fish market [Dataset]"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/ahn2026supervised",
+   "type": "Work",
+   "label": {
+    "ko": "안 (2026) (주)M-Robo",
+    "en": "Fish Market Data로 쉽게 따라하는 머신러닝"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/ahn2026slides",
+   "type": "Work",
+   "label": {
+    "ko": "안 (2026) (주)M-Robo",
+    "en": "라벨링 없이 맞추는 AI — 비지도학습 모델 (강의 슬라이드)"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/hastie2009elements",
+   "type": "Work",
+   "label": {
+    "ko": "Hastie 외 (2009) Springer",
+    "en": "The Elements of Statistical Learning (2nd ed.)"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:concept/unsupervised-learning",
+   "p": "lab:broader",
+   "o": "lab:topic/unsupervised-learning",
+   "anchor": "#compare",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/supervised-learning",
+   "p": "lab:broader",
+   "o": "lab:topic/supervised-learning",
+   "anchor": "#compare",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/self-supervised-learning",
+   "p": "lab:broader",
+   "o": "lab:topic/self-supervised",
+   "anchor": "#toc",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/unsupervised-learning",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/supervised-learning",
+   "anchor": "#compare",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/self-supervised-learning",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/unsupervised-learning",
+   "anchor": "#toc",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/unsupervised-learning",
+   "p": "lab:evaluatedOn",
+   "o": "lab:dataset/fish-market-x10",
+   "anchor": "#data",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/series-record",
+   "p": "lab:supports",
+   "o": "lab:concept/unsupervised-learning",
+   "anchor": "#record",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/where-is-answer",
+   "p": "lab:addressedBy",
+   "o": "lab:concept/unsupervised-learning",
+   "anchor": "#first",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:dataset/fish-market-x10",
+   "p": "lab:assertedIn",
+   "o": "lab:work/ahn2026supervised",
+   "anchor": "#data",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/unsupervised-learning",
+   "p": "lab:explainedIn",
+   "o": "lab:work/pyae2019fish",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/unsupervised-learning",
+   "p": "lab:explainedIn",
+   "o": "lab:work/ahn2026slides",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/unsupervised-learning",
+   "p": "lab:explainedIn",
+   "o": "lab:work/hastie2009elements",
+   "anchor": "#export",
+   "confidence": "high"
+  }
+ ]
+}

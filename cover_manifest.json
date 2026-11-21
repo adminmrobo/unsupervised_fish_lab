@@ -1,0 +1,419 @@
+{
+ "series_ko": "AI 기초 · 비지도학습",
+ "title_ko": "비지도학습 물고기 연구실 (unsupervised_fish_lab) — 라벨링 없이 맞추는 AI",
+ "site_title": "비지도학습 물고기 연구실 — 라벨링 없이 맞추는 AI (목차)",
+ "site_url": "https://adminmrobo.github.io/unsupervised_fish_lab/",
+ "ontology": {
+  "pages": [
+   {
+    "path": "index.html",
+    "kg": true,
+    "export": true
+   },
+   {
+    "path": "01_no_answer_key.html",
+    "kg": true,
+    "export": true
+   },
+   {
+    "path": "02_grouping.html",
+    "kg": true,
+    "export": true
+   },
+   {
+    "path": "03_folding.html",
+    "kg": true,
+    "export": true
+   },
+   {
+    "path": "04_guessing.html",
+    "kg": true,
+    "export": true
+   },
+   {
+    "path": "practice/index.html",
+    "kg": true,
+    "export": true
+   }
+  ],
+  "files": [
+   "kg/index/kg.json",
+   "kg/01_no_answer_key/kg.json",
+   "kg/02_grouping/kg.json",
+   "kg/03_folding/kg.json",
+   "kg/04_guessing/kg.json",
+   "kg/practice/kg.json"
+  ]
+ },
+ "i18n": {
+  "langs": [
+   "ko"
+  ],
+  "pages": {
+   "ko": 6
+  },
+  "readme_langs": [
+   "ko"
+  ]
+ },
+ "languages": [
+  "ko"
+ ],
+ "items": [
+  {
+   "id": "cover_00",
+   "role": "cover",
+   "page": "index.html",
+   "path": "img/cover_00.webp",
+   "size": [
+    1600,
+    900
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_00",
+   "source_of": null,
+   "status": "pending",
+   "alt_ko": "어시장 입구에서 이름표를 뒤집어 덮은 물고기 상자를 여는 연구실 식구 넷"
+  },
+  {
+   "id": "thumb_00",
+   "role": "thumb",
+   "path": "img/thumb_00.webp",
+   "size": [
+    1200,
+    800
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_00",
+   "status": "pending"
+  },
+  {
+   "id": "og_00",
+   "role": "og",
+   "path": "img/og_00.webp",
+   "size": [
+    1200,
+    630
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_00",
+   "status": "pending"
+  },
+  {
+   "id": "cover_01",
+   "role": "cover",
+   "page": "01_no_answer_key.html",
+   "path": "img/cover_01.webp",
+   "size": [
+    1600,
+    900
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_01",
+   "source_of": null,
+   "status": "pending",
+   "alt_ko": "격자 매트 위 두 물고기 사이의 빛나는 점선과 같은 눈금의 자를 늘어놓는 실험대"
+  },
+  {
+   "id": "thumb_01",
+   "role": "thumb",
+   "path": "img/thumb_01.webp",
+   "size": [
+    1200,
+    800
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_01",
+   "status": "pending"
+  },
+  {
+   "id": "og_01",
+   "role": "og",
+   "path": "img/og_01.webp",
+   "size": [
+    1200,
+    630
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_01",
+   "status": "pending"
+  },
+  {
+   "id": "cover_02",
+   "role": "cover",
+   "page": "02_grouping.html",
+   "path": "img/cover_02.webp",
+   "size": [
+    1600,
+    900
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_02",
+   "source_of": null,
+   "status": "pending",
+   "alt_ko": "어시장 진열대의 세 주머니에 체형별로 나뉜 물고기와 깃발을 꽂는 박사"
+  },
+  {
+   "id": "thumb_02",
+   "role": "thumb",
+   "path": "img/thumb_02.webp",
+   "size": [
+    1200,
+    800
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_02",
+   "status": "pending"
+  },
+  {
+   "id": "og_02",
+   "role": "og",
+   "path": "img/og_02.webp",
+   "size": [
+    1200,
+    630
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_02",
+   "status": "pending"
+  },
+  {
+   "id": "cover_03",
+   "role": "cover",
+   "page": "03_folding.html",
+   "path": "img/cover_03.webp",
+   "size": [
+    1600,
+    900
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_03",
+   "source_of": null,
+   "status": "pending",
+   "alt_ko": "손전등으로 비춘 물고기 그림자와 바닥의 큰 종이 지도에 점을 찍는 조수"
+  },
+  {
+   "id": "thumb_03",
+   "role": "thumb",
+   "path": "img/thumb_03.webp",
+   "size": [
+    1200,
+    800
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_03",
+   "status": "pending"
+  },
+  {
+   "id": "og_03",
+   "role": "og",
+   "path": "img/og_03.webp",
+   "size": [
+    1200,
+    630
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_03",
+   "status": "pending"
+  },
+  {
+   "id": "cover_04",
+   "role": "cover",
+   "page": "04_guessing.html",
+   "path": "img/cover_04.webp",
+   "size": [
+    1600,
+    900
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_04",
+   "source_of": null,
+   "status": "pending",
+   "alt_ko": "천으로 가린 저울과 낯선 큰 물고기 앞에서 켜진 경보등을 가리키는 초파리 연구원"
+  },
+  {
+   "id": "thumb_04",
+   "role": "thumb",
+   "path": "img/thumb_04.webp",
+   "size": [
+    1200,
+    800
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_04",
+   "status": "pending"
+  },
+  {
+   "id": "og_04",
+   "role": "og",
+   "path": "img/og_04.webp",
+   "size": [
+    1200,
+    630
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_04",
+   "status": "pending"
+  },
+  {
+   "id": "cover_05",
+   "role": "cover",
+   "page": "practice/index.html",
+   "path": "img/cover_05.webp",
+   "size": [
+    1600,
+    900
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_05",
+   "source_of": null,
+   "status": "pending",
+   "alt_ko": "어시장 운영실의 초록·파랑 손잡이 조작판 앞에 모인 연구실 식구 넷"
+  },
+  {
+   "id": "thumb_05",
+   "role": "thumb",
+   "path": "img/thumb_05.webp",
+   "size": [
+    1200,
+    800
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_05",
+   "status": "pending"
+  },
+  {
+   "id": "og_05",
+   "role": "og",
+   "path": "img/og_05.webp",
+   "size": [
+    1200,
+    630
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_05",
+   "status": "pending"
+  }
+ ],
+ "updated": "2026-11-21"
+}

@@ -1,0 +1,732 @@
+{
+ "version": "1.0",
+ "page": "03_folding",
+ "nodes": [
+  {
+   "id": "lab:concept/dimensionality-reduction",
+   "type": "Concept",
+   "label": {
+    "ko": "차원 축소 (접기)",
+    "en": "Dimensionality reduction"
+   },
+   "page": "03_folding",
+   "anchor": "#map",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "변수 수를 줄여 요약하는 일"
+   }
+  },
+  {
+   "id": "lab:concept/correlation",
+   "type": "Concept",
+   "label": {
+    "ko": "상관계수",
+    "en": "Correlation"
+   },
+   "page": "03_folding",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "두 값이 직선으로 함께 오르내리는 정도"
+   }
+  },
+  {
+   "id": "lab:concept/projection",
+   "type": "Concept",
+   "label": {
+    "ko": "투영 (그림자)",
+    "en": "Projection"
+   },
+   "page": "03_folding",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "좌표와 방향을 자리끼리 곱해 더한 값"
+   }
+  },
+  {
+   "id": "lab:method/pca",
+   "type": "Method",
+   "label": {
+    "ko": "주성분 분석 (PCA)",
+    "en": "Principal component analysis"
+   },
+   "page": "03_folding",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "가장 많이 흔들리는 방향부터 새 축을 만듦"
+   },
+   "source": [
+    {
+     "ref": "pearson1901lines",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:concept/eigenvalue",
+   "type": "Concept",
+   "label": {
+    "ko": "고유값·고유벡터",
+    "en": "Eigenvalue and eigenvector"
+   },
+   "page": "03_folding",
+   "anchor": "#s3",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "방향의 흔들림 크기와 방향"
+   }
+  },
+  {
+   "id": "lab:metric/explained-variance",
+   "type": "Metric",
+   "label": {
+    "ko": "설명된 분산",
+    "en": "Explained variance ratio"
+   },
+   "page": "03_folding",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "전체 흔들림 중 그 방향의 몫"
+   }
+  },
+  {
+   "id": "lab:claim/two-axes-96",
+   "type": "Claim",
+   "label": {
+    "ko": "두 축(PC1+PC2)이 흔들림의 96.1%를 남김 (PC1 87.6%)",
+    "en": "Two axes keep 96.1% of variance"
+   },
+   "page": "03_folding",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "pyae2019fish",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/size-shape-axes",
+   "type": "Claim",
+   "label": {
+    "ko": "PC1은 크기, PC2는 체형 축",
+    "en": "PC1 = size, PC2 = body shape"
+   },
+   "page": "03_folding",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/reconstruction",
+   "type": "Concept",
+   "label": {
+    "ko": "복원과 복원 오차",
+    "en": "Reconstruction error"
+   },
+   "page": "03_folding",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "접은 좌표를 다시 펴서 원래 값과 비교"
+   }
+  },
+  {
+   "id": "lab:limitation/linear-folding",
+   "type": "Limitation",
+   "label": {
+    "ko": "곧은 접기는 휜 관계(무게)를 놓침",
+    "en": "Linear folding misses curved relations"
+   },
+   "page": "03_folding",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/folding-loses-neighbors",
+   "type": "Claim",
+   "label": {
+    "ko": "두 축 지도는 이웃 일치율 79.6%, 여섯 축은 92.3%",
+    "en": "Folding loses neighbor fidelity"
+   },
+   "page": "03_folding",
+   "anchor": "#duel",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/eigenface",
+   "type": "Concept",
+   "label": {
+    "ko": "고유 얼굴",
+    "en": "Eigenface"
+   },
+   "page": "03_folding",
+   "anchor": "#s5",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "얼굴 사진의 주성분을 그림으로 본 것"
+   },
+   "source": [
+    {
+     "ref": "turk1991eigenfaces",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:sim/u3-shadow",
+   "type": "Simulation",
+   "label": {
+    "ko": "그림자 방향 찾기 실험장",
+    "en": "Projection angle lab"
+   },
+   "page": "03_folding",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/pyae2019fish",
+   "type": "Work",
+   "label": {
+    "ko": "Pyae (n.d.) Kaggle",
+    "en": "Fish market [Dataset]"
+   },
+   "page": "03_folding",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/ahn2026slides",
+   "type": "Work",
+   "label": {
+    "ko": "안 (2026) (주)M-Robo",
+    "en": "라벨링 없이 맞추는 AI — 비지도학습 모델 (강의 슬라이드)"
+   },
+   "page": "03_folding",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/pearson1901lines",
+   "type": "Work",
+   "label": {
+    "ko": "Pearson (1901) Philosophical Magazine",
+    "en": "On lines and planes of closest fit to systems of points in space"
+   },
+   "page": "03_folding",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/turk1991eigenfaces",
+   "type": "Work",
+   "label": {
+    "ko": "Turk 외 (1991) Journal of Cognitive Neuroscience",
+    "en": "Eigenfaces for recognition"
+   },
+   "page": "03_folding",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-3-q31-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "길이1·길이2·길이3의 상관이 모두 0.99 이상이라는 뜻은?",
+    "en": "Quiz 3 q31-1"
+   },
+   "page": "03_folding",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-3-q31-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "여섯 변수를 그대로 거리 계산에 넣으면 생기는 일은?",
+    "en": "Quiz 3 q31-2"
+   },
+   "page": "03_folding",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-3-q32-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "좌표 (1, 3)을 방향 (0.6, 0.8)에 비춘 그림자 위치는?",
+    "en": "Quiz 3 q32-1"
+   },
+   "page": "03_folding",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-3-q32-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "PC1은 어떤 방향인가?",
+    "en": "Quiz 3 q32-2"
+   },
+   "page": "03_folding",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-3-q33-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "고유값이 5.257, 0.511, 0.124, 0.110, 0.002, 0.000일 때(합 6.004) PC",
+    "en": "Quiz 3 q33-1"
+   },
+   "page": "03_folding",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-3-q33-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "PCA 네 걸음 중 건너뛰면 \"무게가 PC1을 독점\"하게 되는 걸음은?",
+    "en": "Quiz 3 q33-2"
+   },
+   "page": "03_folding",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-3-q34-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "PC1의 섞은 비율이 여섯 변수 모두 약 0.4일 때 PC1의 뜻은?",
+    "en": "Quiz 3 q34-1"
+   },
+   "page": "03_folding",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-3-q34-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "물고기 지도에서 종 이름표는 언제 썼나?",
+    "en": "Quiz 3 q34-2"
+   },
+   "page": "03_folding",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-3-q35-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "두 축으로 접었다 펼 때 가장 많이 틀리는 변수는?",
+    "en": "Quiz 3 q35-1"
+   },
+   "page": "03_folding",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/unsup-3-q35-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "축을 여섯 개 모두 남기면 복원 오차는?",
+    "en": "Quiz 3 q35-2"
+   },
+   "page": "03_folding",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:concept/dimensionality-reduction",
+   "p": "lab:broader",
+   "o": "lab:topic/pca",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pca",
+   "p": "lab:broader",
+   "o": "lab:topic/pca",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/projection",
+   "p": "lab:broader",
+   "o": "lab:topic/linear-algebra",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/eigenvalue",
+   "p": "lab:broader",
+   "o": "lab:topic/linear-algebra",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/correlation",
+   "p": "lab:broader",
+   "o": "lab:topic/probability-statistics",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/reconstruction",
+   "p": "lab:broader",
+   "o": "lab:topic/pca",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/linear-folding",
+   "p": "lab:broader",
+   "o": "lab:topic/pca",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/eigenface",
+   "p": "lab:broader",
+   "o": "lab:topic/embedding-space",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pca",
+   "p": "lab:partOf",
+   "o": "lab:concept/dimensionality-reduction",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/correlation",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/pca",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/projection",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/pca",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/eigenvalue",
+   "p": "lab:partOf",
+   "o": "lab:method/pca",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pca",
+   "p": "lab:measuredBy",
+   "o": "lab:metric/explained-variance",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/two-axes-96",
+   "p": "lab:supports",
+   "o": "lab:method/pca",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/size-shape-axes",
+   "p": "lab:supports",
+   "o": "lab:method/pca",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pca",
+   "p": "lab:evaluatedBy",
+   "o": "lab:concept/reconstruction",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pca",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/linear-folding",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/folding-loses-neighbors",
+   "p": "lab:supports",
+   "o": "lab:limitation/linear-folding",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/eigenface",
+   "p": "lab:derivedFrom",
+   "o": "lab:method/pca",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:sim/u3-shadow",
+   "p": "lab:demonstratedBy",
+   "o": "lab:concept/projection",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pca",
+   "p": "lab:assertedIn",
+   "o": "lab:work/pearson1901lines",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/two-axes-96",
+   "p": "lab:assertedIn",
+   "o": "lab:work/pyae2019fish",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/eigenface",
+   "p": "lab:assertedIn",
+   "o": "lab:work/turk1991eigenfaces",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pca",
+   "p": "lab:explainedIn",
+   "o": "lab:work/ahn2026slides",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-3-q31-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/correlation",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-3-q31-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/correlation",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-3-q32-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/projection",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-3-q32-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/projection",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-3-q33-1",
+   "p": "lab:assesses",
+   "o": "lab:method/pca",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-3-q33-2",
+   "p": "lab:assesses",
+   "o": "lab:method/pca",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-3-q34-1",
+   "p": "lab:assesses",
+   "o": "lab:claim/size-shape-axes",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-3-q34-2",
+   "p": "lab:assesses",
+   "o": "lab:claim/size-shape-axes",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-3-q35-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/reconstruction",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/unsup-3-q35-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/reconstruction",
+   "anchor": "#s5",
+   "confidence": "high"
+  }
+ ]
+}

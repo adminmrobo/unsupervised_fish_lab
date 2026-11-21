@@ -1,0 +1,42 @@
+{
+ "title": "3장 · 접기 — 차원 축소",
+ "number": "3",
+ "series": "비지도학습 물고기 연구실 (unsupervised_fish_lab)",
+ "about": [
+  "lab:method/pca",
+  "lab:concept/dimensionality-reduction"
+ ],
+ "basedOn": [
+  "pyae2019fish",
+  "ahn2026slides",
+  "pearson1901lines",
+  "turk1991eigenfaces"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-21",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/unsupervised_fish_lab/03_folding.html",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "domain": [
+  "ai"
+ ],
+ "suggestedCitation": "안상선 (2026). 3장 · 접기 — 차원 축소. 비지도학습 물고기 연구실 (unsupervised_fish_lab) 3, v1.0."
+}
