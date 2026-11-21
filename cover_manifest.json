@@ -78,7 +78,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_00",
    "source_of": null,
-   "status": "pending",
+   "status": "ok",
    "alt_ko": "어시장 입구에서 이름표를 뒤집어 덮은 물고기 상자를 여는 연구실 식구 넷"
   },
   {
@@ -98,7 +98,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_00",
-   "status": "pending"
+   "status": "ok"
   },
   {
    "id": "og_00",
@@ -117,7 +117,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_00",
-   "status": "pending"
+   "status": "ok"
   },
   {
    "id": "cover_01",
@@ -137,7 +137,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_01",
    "source_of": null,
-   "status": "pending",
+   "status": "ok",
    "alt_ko": "격자 매트 위 두 물고기 사이의 빛나는 점선과 같은 눈금의 자를 늘어놓는 실험대"
   },
   {
@@ -157,7 +157,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_01",
-   "status": "pending"
+   "status": "ok"
   },
   {
    "id": "og_01",
@@ -176,7 +176,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_01",
-   "status": "pending"
+   "status": "ok"
   },
   {
    "id": "cover_02",
@@ -196,7 +196,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_02",
    "source_of": null,
-   "status": "pending",
+   "status": "ok",
    "alt_ko": "어시장 진열대의 세 주머니에 체형별로 나뉜 물고기와 깃발을 꽂는 박사"
   },
   {
@@ -216,7 +216,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_02",
-   "status": "pending"
+   "status": "ok"
   },
   {
    "id": "og_02",
@@ -235,7 +235,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_02",
-   "status": "pending"
+   "status": "ok"
   },
   {
    "id": "cover_03",
@@ -255,7 +255,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_03",
    "source_of": null,
-   "status": "pending",
+   "status": "ok",
    "alt_ko": "손전등으로 비춘 물고기 그림자와 바닥의 큰 종이 지도에 점을 찍는 조수"
   },
   {
@@ -275,7 +275,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_03",
-   "status": "pending"
+   "status": "ok"
   },
   {
    "id": "og_03",
@@ -294,7 +294,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_03",
-   "status": "pending"
+   "status": "ok"
   },
   {
    "id": "cover_04",
@@ -314,7 +314,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_04",
    "source_of": null,
-   "status": "pending",
+   "status": "ok",
    "alt_ko": "천으로 가린 저울과 낯선 큰 물고기 앞에서 켜진 경보등을 가리키는 초파리 연구원"
   },
   {
@@ -334,7 +334,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_04",
-   "status": "pending"
+   "status": "ok"
   },
   {
    "id": "og_04",
@@ -353,7 +353,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_04",
-   "status": "pending"
+   "status": "ok"
   },
   {
    "id": "cover_05",
@@ -373,7 +373,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": "see docs/COVER_PROMPTS_unsupervised_fish_lab.md#cover_05",
    "source_of": null,
-   "status": "pending",
+   "status": "ok",
    "alt_ko": "어시장 운영실의 초록·파랑 손잡이 조작판 앞에 모인 연구실 식구 넷"
   },
   {
@@ -393,7 +393,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_05",
-   "status": "pending"
+   "status": "ok"
   },
   {
    "id": "og_05",
@@ -412,8 +412,8 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_05",
-   "status": "pending"
+   "status": "ok"
   }
  ],
- "updated": "2026-11-21"
+ "updated": "2026-11-22"
 }
